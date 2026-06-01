@@ -299,8 +299,9 @@ export function createSuparseMcpServer(): McpServer {
       },
     },
     async ({ file_path, template_id, split, cleanup, result_mode, api_url }) => {
-      const client = createClient(api_url);
+      let client: SuparseNodeClient | undefined;
       try {
+        client = createClient(api_url);
         const mode = result_mode ?? "defer";
         if (mode === "defer") {
           if (cleanup) {
@@ -350,7 +351,7 @@ export function createSuparseMcpServer(): McpServer {
       } catch (error) {
         return toolError(error);
       } finally {
-        await client.close();
+        await client?.close();
       }
     },
   );
@@ -377,8 +378,9 @@ export function createSuparseMcpServer(): McpServer {
       },
     },
     async ({ folder_path, template_id, split, cleanup, result_mode, api_url }) => {
-      const client = createClient(api_url);
+      let client: SuparseNodeClient | undefined;
       try {
+        client = createClient(api_url);
         const mode = result_mode ?? "defer";
         if (mode === "defer") {
           if (cleanup) {
@@ -419,7 +421,7 @@ export function createSuparseMcpServer(): McpServer {
       } catch (error) {
         return toolError(error);
       } finally {
-        await client.close();
+        await client?.close();
       }
     },
   );
@@ -447,8 +449,9 @@ export function createSuparseMcpServer(): McpServer {
       },
     },
     async ({ include_system, api_url }) => {
-      const client = createClient(api_url);
+      let client: SuparseNodeClient | undefined;
       try {
+        client = createClient(api_url);
         const templates = await client.listTemplates({ includeSystem: include_system });
         const mappedTemplates = templates.map(
           ({
@@ -495,7 +498,7 @@ export function createSuparseMcpServer(): McpServer {
       } catch (error) {
         return toolError(error);
       } finally {
-        await client.close();
+        await client?.close();
       }
     },
   );
@@ -518,8 +521,9 @@ export function createSuparseMcpServer(): McpServer {
       },
     },
     async ({ document_ids, export_type, api_url }) => {
-      const client = createClient(api_url);
+      let client: SuparseNodeClient | undefined;
       try {
+        client = createClient(api_url);
         const exportType = export_type ?? "unified";
         const exportResult = await client.fetchResults(document_ids, {
           format: "json",
@@ -534,7 +538,7 @@ export function createSuparseMcpServer(): McpServer {
       } catch (error) {
         return toolError(error);
       } finally {
-        await client.close();
+        await client?.close();
       }
     },
   );
@@ -565,8 +569,9 @@ export function createSuparseMcpServer(): McpServer {
       },
     },
     async ({ document_ids, output_path, format, export_type, api_url }) => {
-      const client = createClient(api_url);
+      let client: SuparseNodeClient | undefined;
       try {
+        client = createClient(api_url);
         const exportType = export_type ?? "unified";
         const outputPath = await client.downloadResults(document_ids, output_path, {
           format,
@@ -582,7 +587,7 @@ export function createSuparseMcpServer(): McpServer {
       } catch (error) {
         return toolError(error);
       } finally {
-        await client.close();
+        await client?.close();
       }
     },
   );
@@ -602,8 +607,9 @@ export function createSuparseMcpServer(): McpServer {
       },
     },
     async ({ document_ids, api_url }) => {
-      const client = createClient(api_url);
+      let client: SuparseNodeClient | undefined;
       try {
+        client = createClient(api_url);
         const payload: DeleteDocumentsPayload = {
           deleted: await client.deleteDocuments(document_ids),
           document_ids,
@@ -612,7 +618,7 @@ export function createSuparseMcpServer(): McpServer {
       } catch (error) {
         return toolError(error);
       } finally {
-        await client.close();
+        await client?.close();
       }
     },
   );
