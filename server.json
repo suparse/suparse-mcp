@@ -1,0 +1,34 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.suparse/suparse-mcp",
+  "title": "Suparse MCP",
+  "description": "MCP stdio server for the Suparse Document Processing API.",
+  "repository": {
+    "url": "https://github.com/suparse/suparse-mcp",
+    "source": "github"
+  },
+  "version": "1.2.0",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "@suparse/mcp",
+      "version": "1.2.0",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "SUPARSE_API_KEY",
+          "description": "Suparse API key used to authenticate requests.",
+          "required": true,
+          "sensitive": true
+        },
+        {
+          "name": "SUPARSE_API_URL",
+          "description": "Optional Suparse API base URL override.",
+          "required": false
+        }
+      ]
+    }
+  ]
+}

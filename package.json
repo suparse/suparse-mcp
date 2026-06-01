@@ -1,0 +1,72 @@
+{
+  "name": "@suparse/mcp",
+  "version": "1.2.0",
+  "description": "MCP server for the Suparse Document Processing API",
+  "author": "Suparse <support@suparse.com>",
+  "homepage": "https://github.com/suparse/suparse-mcp#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suparse/suparse-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/suparse/suparse-mcp/issues"
+  },
+  "packageManager": "pnpm@10.27.0",
+  "mcpName": "io.github.suparse/suparse-mcp",
+  "type": "module",
+  "bin": {
+    "suparse-mcp": "dist/index.mjs"
+  },
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      }
+    }
+  },
+  "files": [
+    "dist",
+    "src",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsdown",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "lint": "eslint src/ test/",
+    "clean": "rm -rf dist *.tsbuildinfo",
+    "prepublishOnly": "pnpm run build"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "document-processing",
+    "ocr",
+    "suparse"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.21.0",
+    "@suparse/sdk": "^1.2.0",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^22.0.0",
+    "eslint": "^10.3.0",
+    "eslint-config-prettier": "^10.1.8",
+    "tsdown": "^0.22.0",
+    "typescript": "^5.7.0",
+    "typescript-eslint": "^8.59.3",
+    "vitest": "^4.1.7"
+  }
+}
