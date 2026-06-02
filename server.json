@@ -20,13 +20,15 @@
         {
           "name": "SUPARSE_API_KEY",
           "description": "Suparse API key used to authenticate requests.",
-          "required": true,
-          "sensitive": true
+          "isRequired": true,
+          "format": "string",
+          "isSecret": true
         },
         {
           "name": "SUPARSE_API_URL",
           "description": "Optional Suparse API base URL override.",
-          "required": false
+          "isRequired": false,
+          "format": "string"
         }
       ]
     }
