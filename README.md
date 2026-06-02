@@ -1,10 +1,6 @@
-# @suparse/mcp
+# Suparse MCP Server
 
-MCP stdio server for the [Suparse](https://suparse.com) Document Processing API.
-
-Use this package to connect Suparse document extraction to local MCP clients such as Claude Code and Codex.
-
-MCP Registry name: `io.github.suparse/suparse-mcp`
+MCP stdio server for the [Suparse](https://suparse.com) Document Processing API. Use it from local MCP clients such as Claude Code and Codex to extract structured data from documents into JSON, CSV, XLSX, or Google Sheets; process single files or folders; let Suparse auto-detect extraction schemas or apply your team templates; split mixed multi-page documents; and download or clean up results by document ID.
 
 ## Security Boundary
 
@@ -12,9 +8,8 @@ This is a local stdio MCP server. Connected MCP clients can ask it to read local
 
 ## Requirements
 
-- Node.js 20+
 - A Suparse API key
-- ESM runtime support. The package executable is available as `suparse-mcp`; programmatic imports use ESM.
+- Node.js 20+
 
 ## Authentication
 
