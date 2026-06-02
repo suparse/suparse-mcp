@@ -105,7 +105,7 @@ const sdkMock = vi.hoisted(() => {
     SuparseAuthError,
     SuparseError,
     SuparseNodeClient,
-    VERSION: "1.2.0",
+    VERSION: "1.3.0",
     state,
   };
 });
@@ -226,6 +226,18 @@ describe("createSuparseMcpServer", () => {
     expect(sdkMock.state.instances[0]?.options).toEqual({
       apiKey: "test-key",
       baseUrl: "https://api.example.test/v1",
+    });
+  });
+
+  it("uses SUPARSE_API_URL when no per-tool API URL override is provided", async () => {
+    process.env.SUPARSE_API_KEY = "test-key";
+    process.env.SUPARSE_API_URL = "https://env-api.example.test/v1";
+
+    await callTool("list_templates", {});
+
+    expect(sdkMock.state.instances[0]?.options).toEqual({
+      apiKey: "test-key",
+      baseUrl: "https://env-api.example.test/v1",
     });
   });
 

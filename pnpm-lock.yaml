@@ -12,8 +12,8 @@ importers:
         specifier: ^1.21.0
         version: 1.29.0(zod@3.25.76)
       '@suparse/sdk':
-        specifier: ^1.2.0
-        version: 1.2.0
+        specifier: ^1.3.0
+        version: 1.3.0
       zod:
         specifier: ^3.25.0
         version: 3.25.76
@@ -270,8 +270,8 @@ packages:
   '@standard-schema/spec@1.1.0':
     resolution: {integrity: sha512-l2aFy5jALhniG5HgqrD6jXLi/rUWrKvqN/qJx6yoJsgKhblVd+iqqU4RCXavm/jPityDo5TCvKMnpjKnOriy0w==}
 
-  '@suparse/sdk@1.2.0':
-    resolution: {integrity: sha512-QL2JCn5gmRubK1eqpGSbupmXS+Oz/bJm44DCZMna8X9Mtfwk4omjsDSQ2aSnKfYakA3abOK5nTueyBdFENcRqQ==}
+  '@suparse/sdk@1.3.0':
+    resolution: {integrity: sha512-OMO1RRDIgnJnFsfv+PWtDQYDMJGzcAVvoFGNz75Kq7YADfy+uZyFPSdGq+KqzvGCFQhp8NeI9lwcHSOZ6uLqBQ==}
     engines: {node: '>=20.0.0'}
 
   '@tybys/wasm-util@0.10.2':
@@ -1531,7 +1531,7 @@ snapshots:
 
   '@standard-schema/spec@1.1.0': {}
 
-  '@suparse/sdk@1.2.0': {}
+  '@suparse/sdk@1.3.0': {}
 
   '@tybys/wasm-util@0.10.2':
     dependencies:

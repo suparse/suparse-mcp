@@ -1,5 +1,18 @@
 # @suparse/mcp
 
+## 1.3.0
+
+### Minor Changes
+
+- Split `list_templates` output into `team_templates` and discovery-only `system_templates`, with guidance for choosing extraction templates.
+- Tighten extraction and JSON result output schemas while preserving support for deferred and returned JSON modes.
+- Preserve all JSON exports returned by SDK extraction while reporting totals as processed inputs.
+
+### Patch Changes
+
+- Updated dependencies
+  - @suparse/sdk@1.3.0
+
 ## 1.2.0
 
 ### Minor Changes

@@ -188,7 +188,8 @@ function getApiKey(): string {
 
 function createClient(apiUrl?: string): SuparseNodeClient {
   const options: SuparseNodeClientOptions = { apiKey: getApiKey() };
-  if (apiUrl) options.baseUrl = apiUrl;
+  const baseUrl = apiUrl ?? process.env.SUPARSE_API_URL;
+  if (baseUrl) options.baseUrl = baseUrl;
   return new SuparseNodeClient(options);
 }
 
