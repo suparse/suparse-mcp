@@ -1,6 +1,6 @@
 {
   "name": "@suparse/mcp",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "MCP server for extracting structured data from PDFs and documents with Suparse AI OCR",
   "author": "Suparse <support@suparse.com>",
   "homepage": "https://www.suparse.com",
@@ -61,7 +61,7 @@
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.21.0",
-    "@suparse/sdk": "^1.3.0",
+    "@suparse/sdk": "^1.4.0",
     "zod": "^3.25.0"
   },
   "devDependencies": {

@@ -1,5 +1,17 @@
 # @suparse/mcp
 
+## 1.4.0
+
+### Minor Changes
+
+- Update the MCP server to `@suparse/sdk@1.4.0`.
+- Add encrypted-PDF passwords and remote-folder IDs to extraction tools.
+- Add XLSX `standard`/`flat` layout selection to `download_results`.
+- Add full template views while preserving compact summary output by default.
+- Add quick schema creation start, status, and wait tools.
+- Add direct single-document JSON result fetching.
+- Preserve structured API error metadata while redacting supplied PDF passwords.
+
 ## 1.3.0
 
 ### Minor Changes

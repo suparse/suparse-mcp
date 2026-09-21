@@ -2,19 +2,19 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.suparse/suparse-mcp",
   "title": "Suparse Document Processing",
-  "description": "Extract structured data from PDFs and documents with Suparse AI OCR.",
+  "description": "Extract structured data, create schemas, and export results from PDFs and documents with Suparse AI OCR.",
   "repository": {
     "url": "https://github.com/suparse/suparse-mcp",
     "source": "github"
   },
   "websiteUrl": "https://www.suparse.com",
   "categories": ["ai-ml", "developer-tools", "productivity"],
-  "version": "1.3.0",
+  "version": "1.4.0",
   "packages": [
     {
       "registryType": "npm",
       "identifier": "@suparse/mcp",
-      "version": "1.3.0",
+      "version": "1.4.0",
       "transport": {
         "type": "stdio"
       },
